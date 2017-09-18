@@ -22,6 +22,9 @@ extern struct NODE
          * gravitational force solver will check this and use it
          * open the node if a particle is closer.*/
         unsigned int MaxSofteningType :3;
+        /* Stores if there are types with different softenings in the node.
+         * This is used to open the node if it matters, because
+         * there is no other way to tell where the types in the node are.*/
         unsigned int MixedSofteningsInNode :1;
     } f;
     union
